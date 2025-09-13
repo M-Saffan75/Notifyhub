@@ -1,0 +1,5 @@
+Teacher: Physics, Sir Ahmed khan, Class Timing: 12:pm, Class Room: Section A
+Teacher: Math, Miss Fatima, Class Timing: 2:pm, Class Room: Section B
+Teacher: Chemistry, Dr. Ali, Class Timing: 10:am, Class Room: Lab 1
+Course: Computer Science, Credits: 3, Prerequisite: None
+Event: Exam Schedule, Date: 15-Oct-2025, Time: 9:am
