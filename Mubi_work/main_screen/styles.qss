@@ -1,0 +1,136 @@
+/* Base */
+QWidget {
+    background: #f0f0f0;
+    font-family: "Roboto", sans-serif;
+    color: #222;
+}
+
+/* Header */
+/* Header */
+QFrame#header {
+    background: #7b1515;   /* solid maroon */
+    border-radius: 6px;
+}
+QLabel#univLabel {
+    background: transparent;   /* ✅ no white bg */
+    color: white;
+    font-family: "Montserrat";
+    font-size: 22px;
+    font-weight: bold;
+}
+QLabel#datetimeLabel {
+    background: transparent;   /* ✅ no white bg */
+    color: #ffd966;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "Roboto";
+}
+
+
+/* Cards */
+QFrame#alertsCard, QFrame#noticesCard, QFrame#deptCard,
+QFrame#ttCard, QFrame#examCard, QFrame#aiCard {
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    padding: 12px;
+}
+
+/* Section Titles */
+QLabel#sectionTitle {
+    color: #7b1515;
+    font-family: "Montserrat";
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 3px solid #d4a017;  /* golden underline */
+    padding-bottom: 4px;
+    margin-bottom: 12px;
+}
+
+/* Placeholders */
+QFrame#noticeBox, QFrame#deptBox {
+    background: #fafafa;
+    border: 1.5px dashed #bbb;
+    border-radius: 10px;
+}
+QFrame#noticeBox QLabel, QFrame#deptBox QLabel {
+    color: #888;
+    font-size: 14px;
+}
+
+/* Timetable (NO ORANGE HEADER NOW) */
+QTableWidget {
+    border: 1px solid #ddd;
+    font-size: 14px;
+    background: #fff;
+    gridline-color: #ddd;
+}
+QTableWidget::item {
+    padding: 6px;
+    border-bottom: 1px solid #eee;
+}
+QTableWidget::item:selected {
+    background: #f2f2f2;
+    color: #222;
+}
+QHeaderView::section {
+    background: #f9f9f9;   /* simple clean header */
+    color: #333;
+    font-family: "Montserrat";
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    padding: 6px;
+}
+
+/* Exam Updates */
+/* Exam Updates */
+QFrame#examCard {
+    background: #ffffff;       /* ✅ plain white now */
+    border: 1px solid #ddd;
+    border-radius: 12px;
+}
+
+/* Department Boxes */
+QFrame#deptBox {
+    background: #fafafa;
+    border: 1.5px dashed #bbb;
+    border-radius: 12px;
+    margin: 6px;              /* ✅ add spacing inside */
+}
+QFrame#deptBox QLabel {
+    color: #888;
+    font-size: 14px;
+}
+
+
+/* AI Assistant */
+QTextEdit {
+    background: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 8px;
+    font-size: 13px;
+}
+QPushButton#aiButton {
+    background: #7b1515;
+    color: #fff;
+    border-radius: 10px;
+    padding: 14px;
+    font-size: 15px;
+    font-weight: bold;
+    min-width: 220px;
+}
+QPushButton#aiButton:hover {
+    background: #a31515;
+}
+
+/* Footer */
+QLabel#footer {
+    background: #7b1515;
+    color: #fff;
+    padding: 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-family: "Roboto";
+}
