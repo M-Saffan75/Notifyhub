@@ -3,8 +3,8 @@ import colors from '../theme/Color';
 import images from '../images/Image';
 
 const ButtonHere = ({
-    btn_text, Color, backgroundColor, fontSize, src,
-    textTransform, borderRadius, border, height, width
+    btn_text, color, backgroundColor, fontSize, src, backgroundColorimg,
+    textTransform, borderRadius, border, height, btnwidth, width
 }) => {
 
     return (
@@ -12,16 +12,18 @@ const ButtonHere = ({
         <div>
             <button className='btn_here'
                 style={{
-                    width: '100%',
+                    width: btnwidth ?? '100%',
                     padding: '2% 2%',
                     cursor: 'pointer',
-                    fontWeight: 'bold',
-                    fontSize: fontSize ?? 8,
-                    color: Color ?? colors.primary,
+                    fontWeight: '600',
+                    fontFamily: 'poppins',
+                    fontSize: fontSize ?? 9,
+                    color: color ?? colors.primary,
                     borderRadius: borderRadius ?? 100,
                     textTransform: textTransform ?? 'uppercase',
                     backgroundColor: backgroundColor ?? colors.secondary,
                     border: border ? border : `2px solid ${colors.secondary}`,
+                    // border:'none',
 
                     display: 'flex',
                     flexDirection: 'row',
@@ -31,7 +33,7 @@ const ButtonHere = ({
             >
 
                 <div style={{
-                    backgroundColor: colors.primary,
+                    backgroundColor: backgroundColorimg ?? colors.primary,
                     height: 20, width: 20, borderRadius: 100,
 
                     display: 'flex',
@@ -46,7 +48,7 @@ const ButtonHere = ({
                     />
                 </div>
 
-                <div style={{ position: 'relative', right: '22%', }}>
+                <div style={{ position: 'relative', right: '20%', }}>
                     {btn_text}
                 </div>
 

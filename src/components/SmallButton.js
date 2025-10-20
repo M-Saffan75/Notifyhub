@@ -4,45 +4,57 @@ import images from '../images/Image'
 
 const SmallButton = ({
     btn_text, Color, backgroundColor, fontSize, src,
-    textTransform, borderRadius, border, height, width
+    fontWeight, imgwidth, imgheight, borderColor, justifyContent,
+    textTransform, borderRadius, border, height, width, showbtnimg
 }) => {
 
     return (
         <>
             <div>
-                <button className='btn_here'
-                    style={{
-                        width: '40%',
-                        padding: '1.2% 2%',
-                        cursor: 'pointer',
-                        fontWeight: 'bold',
-                        fontSize: fontSize ?? 8,
-                        color: Color ?? colors.primary,
-                        borderRadius: borderRadius ?? 5,
-                        textTransform: textTransform ?? 'capitalize',
-                        backgroundColor: backgroundColor ?? colors.success,
-                        border: border ? border : `2px solid ${colors.success}`,
+                <div style={{
+                    // width: '90%',
+                    display: 'flex',
+                    // backgroundColor: 'blueviolet',
+                    justifyContent: justifyContent ?? 'flex-end',
 
-                        display: 'flex',
-                        flexDirection: 'row',
-                        alignItems: 'center',
-                        justifyContent: 'space-between'
-                    }}>
-                    update
-                    <div style={{
+                }}>
+                    <button className='btn_here'
+                        style={{
+                            height: height ?? '12%',
+                            width: width ?? 45,
+                            // padding: '1% 1% 1% 1%',
+                            cursor: 'pointer',
+                            fontFamily: 'poppins',
+                            fontWeight: fontWeight ?? '500',
+                            letterSpacing: .2,
+                            fontSize: fontSize ?? 7,
+                            color: Color ?? colors.primary,
+                            borderColor: borderColor,
+                            borderRadius: borderRadius ?? 3,
+                            textTransform: textTransform ?? 'capitalize',
+                            backgroundColor: backgroundColor ?? colors.success,
+                            border: 'none',
 
-                        display: 'flex',
-                        alignItems: 'center',
-                        flexDirection: 'row',
-                        justifyContent: 'center',
-                    }}>
-                        <img src={src ?? images.editicon} alt='icon'
-                            height={height ?? 10}
-                            width={width ?? 10}
-                            style={{ backgroundSize: 'cover', objectFit: 'contain' }}
-                        />
-                    </div>
-                </button>
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+
+                        }}>
+                        <div style={{ fontFamily: 'poppins' }}>
+                            {btn_text}
+                        </div>
+
+                        {showbtnimg == false ? '' :
+                            <div style={{ display: 'flex', alignItems: 'baseline', alignItems: 'center', position: 'relative', left: 2 }}>
+                                <img src={src ?? images.editicon} alt='icon'
+                                    height={imgheight ?? 8}
+                                    width={imgwidth ?? 8}
+                                    style={{ backgroundPosition: 'center', backgroundSize: 'cover', }}
+                                />
+                            </div>
+                        }
+                    </button>
+                </div>
             </div>
         </>
     )
