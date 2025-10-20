@@ -5,7 +5,7 @@ body {
     padding: 0;
     /* font-family: 'poppins'; */
 
-    background-color: #ffffff;
+    background-color: #0a7b70;
 }
 
 /*  */
@@ -55,7 +55,7 @@ body {
 
 .row_head_area {
 
-    margin: 0 2% ;
+    margin: 0 2%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -168,16 +168,16 @@ body {
 /*  */
 
 .notice_here_outline {
+    width: 110px;
     margin: 2% 0;
     border-radius: 5px;
     border: 1.4px solid;
-    padding: 2% 1% 1.5% 1%;
-
+    padding: 2% 1.5% 1.5% 1%;
+    /* background-color: #0a7b70; */
     display: flex;
     align-self: center;
     justify-content: center;
     flex-direction: column;
-
 }
 
 .notice_here {
@@ -192,7 +192,14 @@ body {
     align-self: center;
     justify-content: center;
     background-color: red;
+}
 
+.sub_notice_area {
+    display: flex;
+    /* flex-direction: row; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
 
 /*  */
@@ -261,7 +268,7 @@ body {
     margin-top: 2%;
     padding: 2.3% 0%;
     border-radius: 7px;
-    max-height: 210px;
+    /* max-height: 210px; */
 
     overflow: hidden;
 }
@@ -311,5 +318,106 @@ body {
     padding: 0 6%;
 }
 
+.footer_area {
+    width: '100%';
+    height: 32px;
+    font-size: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.responsive_area {
+    display: none;
+}
 
 /*  */
+
+
+@media screen and (max-width: 800px) {
+    #container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #logo_area_container {
+        width: 100%;
+        margin-bottom: 1%;
+    }
+
+    .btn_area {
+        display: none;
+    }
+
+
+    .sub_notice_area {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+
+    .notice_here_outline {
+        padding: 1% 1.5% 1.5% 1%;
+    }
+
+
+    .responsive_area {
+        display: block;
+    }
+
+
+    .inpt_alert_text {
+        width: 94%;
+        font-size: 8px;
+        margin: 0% 2% 1% 2%;
+    }
+
+    .inpt_hightlight {
+        width: 75%;
+        padding: 1%;
+        font-size: 14px;
+    }
+
+    .center_area {
+        width: 100%;
+    }
+
+    .third_area {
+        width: 100%;
+        margin-top: 2%;
+    }
+}
+
+
+
+@media screen and (max-width: 500px) {
+    .inpt_hightlight {
+        width: 75%;
+        padding: 1%;
+        font-size: 9px;
+    }
+
+
+    .footer_area {
+        width: '100%';
+        height: 32px;
+        font-size: 10px;
+        text-align: center;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .inpt_alert_text {
+        width: 94%;
+        font-size: 8px;
+        margin: 2% 2% 1% 2%;
+    }
+
+}

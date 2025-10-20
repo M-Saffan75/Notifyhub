@@ -32,25 +32,31 @@ const Admin_Panel = () => {
                             <ButtonHere btn_text={'academic notices'} />
                         </div>
 
-                        {items.map((_, index) => (
-                            <div
-                                key={index}
-                                className='notice_here_outline'
-                                style={{ borderColor: colors.success }}>
-                                <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '2%' }}>
-                                    <SmallButton btn_text={'update'} />
-                                </div>
-                                <div>
-                                    <img
-                                        src={images.notice}
-                                        className='notice_here'
-                                        alt='update here'
-                                        style={{ borderColor: colors.success }}
-                                    />
-                                </div>
-                            </div>
-                        ))}
+                        <div className='responsive_area'>
+                            <HeadBtn text={'department Notices '} width={'50%'} fontSize={16} />
+                        </div>
 
+                        <div className='sub_notice_area'>
+                            {items.map((_, index) => (
+                                <div
+                                    key={index}
+                                    className='notice_here_outline'
+                                    style={{ borderColor: colors.success }}>
+                                    <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '2%' }}>
+                                        <SmallButton btn_text={'update'} />
+                                    </div>
+                                    <div>
+                                        <img
+                                            src={images.notice}
+                                            className='notice_here'
+                                            alt='update here'
+                                            style={{ borderColor: colors.success }}
+                                        />
+                                    </div>
+                                </div>
+                            ))}
+
+                        </div>
                     </div>
 
                 </div>
@@ -78,9 +84,9 @@ const Admin_Panel = () => {
                         }}>
                         <div className='row_head_area'>
 
-                            <HeadingHere text={'important alerts '} fontSize={16} ShowLine={true} width={'50%'}  /> 
+                            <HeadingHere text={'important alerts '} fontSize={16} ShowLine={true} width={'50%'} />
                             <SmallButton btn_text='update' fontSize={9} width={55} justifyContent={'center'} backgroundColor={colors.secondary} showbtnimg={false} />
-                        
+
                         </div>
 
                         <textarea className='inpt_alert_text' type='text' maxLength={180}
@@ -191,7 +197,7 @@ const Admin_Panel = () => {
 
                             {ai_items.map((_, index) => (
                                 <div key={index} className='sub_ai_keywords_area' style={{ backgroundColor: colors.deep_grey }}>
-                                    <div style={{ display: 'flex', flexDirection: 'row', padding: "0 3% 0 3%" ,justifyContent:'space-between'}}>
+                                    <div style={{ display: 'flex', flexDirection: 'row', padding: "0 3% 0 3%", justifyContent: 'space-between' }}>
                                         <input className='ai_keywords_input' type='text' defaultValue={'sir zeeshan ki class kab hai ?'}
                                             style={{ border: `1px solid ${colors.success}`, backgroundColor: 'transparent', }} maxLength={30} />
                                         <SmallButton btn_text='update' showbtnimg={false} width={40} />
@@ -199,7 +205,7 @@ const Admin_Panel = () => {
                                     <div>
                                         <textarea className='ai_keywords_input_answer' type='text'
                                             defaultValue={'sir zeeshan ki class subha 10:20 se 11:10 tak hoti hai cs department mein part || students.'} rows={3}
-                                            style={{ border: `1px solid ${colors.success}`, resize: 'none', backgroundColor: 'transparent', color: colors.grey, margin: "2% 3% 0 3%", outline: 'none', }}  maxLength={150} />
+                                            style={{ border: `1px solid ${colors.success}`, resize: 'none', backgroundColor: 'transparent', color: colors.grey, margin: "2% 3% 0 3%", outline: 'none', }} maxLength={150} />
                                     </div>
                                 </div>
                             ))}
@@ -217,7 +223,9 @@ const Admin_Panel = () => {
                 {/*  */}
 
             </div>
-            <div style={{ backgroundColor: colors.secondary, width: '100%', height: 31 }}></div>
+            <div style={{ backgroundColor: colors.secondary, color: colors.primary }} className='footer_area'>
+                GC University Hyderabad, Kali Mori Hyderabad Sindh, Pakistan - Phone: 022-2111856
+            </div>
 
         </>
     )
